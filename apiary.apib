@@ -5611,6 +5611,26 @@ You can post image to your throw using this action.
             "large_url": "http://media1.santabanta.com/full5/Football/Lionel%20Messi/lionel-messi-29a.jpg"
         }
         
+## Throw [/throws/upload_video]
+            
+### Post an video [POST]
+
+You can post video to your throw using this action.
+
++ Request (multipart/form-data; boundary=---BOUNDARY)
+
+        -----BOUNDARY
+        Content-Disposition: form-data; name="image[file]"; filename="image.jpg"
+        Content-Type: video/mp4
+        Content-Disposition: form-data; name="throw_id" 1
+        -----BOUNDARY
+
++ Response 201 (application/json)
+
+        {
+            "video_url": "http://techslides.com/demos/sample-videos/small.mp4"
+        }
+        
 ## Like a throw [/throws/like{?toggled,throw_id,user_id}]
 
 + Parameters
